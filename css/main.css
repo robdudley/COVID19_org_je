@@ -68,10 +68,15 @@ header {
 	font-size:0.8rem;
 }
 
-
-
 .updated span {
 	font-size:1.4rem;
+}
+
+.subtitle {
+	text-align: center;
+	color:#2b313f;
+	background:white; 
+	padding:10px 30px 0;
 }
 
 
@@ -272,15 +277,14 @@ header {
 }
 
 .change-data {
-	font-weight: bold;
 	text-align: center;
 }
 
 .change-data.poschange {
-	color: #da3849;
+	color: #50af85;
 }
 .change-data.negchange {
-	color:#30a64a;
+	color: #ca3b48;
 }
 
 
@@ -306,6 +310,22 @@ footer {
 	margin-right:10px;
 	float: left;
 	display: block;	
+}
+
+.covidCharts {
+    width: 100%;
+    height: 100%;
+}
+
+.covidCharts canvas {
+    display: inline !important;
+}
+
+.warning {
+	background:black;
+	padding:10px;
+	font-size:1.4rem;
+	color:white;
 }
 
 

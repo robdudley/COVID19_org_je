@@ -53,63 +53,98 @@
         </div>
 
       </div>
-    </div>
+    </div>  
+   <!--  <div class="subtitle">This is a Covid19 test results tracker for the <u>Island of Jersey</u> in the Channel Islands</div> -->
+    <!-- <div class="warning" style="text-align: center; margin-top:5px;">This data is currently broken due to incorrect data from the Government feed</div> -->
   </header>
 
   <div class="container">
 
     <div class="row">    
+      <div class="four columns">
+        <h2>About</h2>
+        A <a href="http://www.bearpig.com" target="_blank">bearpig</a> & <a href="http://www.openrock.co/" target="_blank">openrock</a> hack using COVID19 data produced by the Government of Jersey via <a href="https://opendata.gov.je/dataset/coronavirus-covid-19-number-of-cases-in-jersey">Open Data Portal</a> under the <a href="https://opendata.gov.je/pages/open-government-licence-jersey-ogl-j-v1-0" target="_blank">OPL-J Licence</a>. <br/> You can find the project on Github <a href="https://github.com/bearpig/COVID19_org_je" target="_blank"> here.</a>
+      </div>
 
-      <div class=" four columns">
+      <div class="eight columns">
         <h2>Number of Tests</h2>
 
         <div class="card">
 
           <div class="tested_people">
-            <div class="data-label">People</div>
-            <div id="tested_people" class="data"></div>
-            <div class="change">1 day change</div>
-            <div id="tested_24" class="change-data"></div>
-            <div class="change">1 week change</div>
-            <div id="tested_7" class="change-data"></div>
-          </div>
 
-          <div class="separator"></div>
-
-          <div class="tested_population">
-            <div class="data-label">Population *</div>
-            <div id="tested_population" class="data"></div>
-          </div>
-
-          <div class="separator"></div>
-
-          <div class="tested_samples">
-            <div><span id="tested_samples" class="data"></span> samples have been tested
+            <div class="six columns">    
+              <div class="data-label">Total</div>
+              <div id="total_tested" class="data"></div>
             </div>
-            <div><span id="tested_results" class="data"></span> results have been received
-            </div>
-          </div>
 
+            <div class="six columns">
+              <div class="change">1 day change</div>
+              <div id="tested_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="tested_7" class="change-data"></div>
+            </div>
+
+          </div>
         </div>
       </div>
+    </div>
+    <h2>Reason for Test</h2>
+    <div class="row">
 
-      <div class="eight columns">
+      <div class="four columns">
+        <div class="card">
+          <div class="data-label">Symptomatic</div>
+            <div id="reason_symptomatic" class="data"></div>
+            <div class="change">Day</div>
+            <div id="reason_symptomatic_24" class="change-data"></div>
+            <div class="change">Week</div>
+            <div id="reason_symptomatic_7" class="change-data"></div>
+        </div>
+      </div>
+       <div class="four columns">
+        <div class="card">
+         <div class="data-label">Inbound Travel</div>
+            <div id="reason_travel" class="data"></div>
+            <div class="change">Day</div>
+            <div id="reason_travel_24" class="change-data"></div>
+            <div class="change">Week</div>
+            <div id="reason_travel_7" class="change-data"></div>
+        </div>
+      </div>
+       <div class="four columns">
+        <div class="card">
+          <div class="data-label">Screening/Tracking</div>
+            <div id="reason_screening" class="data"></div>
+            <div class="change">Day</div>
+            <div id="reason_screening_24" class="change-data"></div>
+            <div class="change">Week</div>
+            <div id="reason_screening_7" class="change-data"></div>
+        </div>
+      </div>
+    </div>
+
+<hr>
+
+    <div class="row">
+
+      <div class="twelve columns">
 
         <h2>Test Results</h2>
 
         <div class="row">
   
-          <div class="card confirmed six columns">                
+          <div class="card confirmed four columns">                
             <div class="data-label">Confirmed Cases</div>
             <div id="confirmedcases" class="data"></div>
-            <div class="change">1 day change</div>
+            <div class="change">Day</div>
             <div id="confirmed_24" class="change-data"></div>
-            <div class="change">1 week change</div>
+            <div class="change">Week</div>
             <div id="confirmed_7" class="change-data"></div>
           </div>
          
 
-          <div class="card negative six columns">               
+          <div class="card negative four columns">               
             <div class="data-label">Negative Results</div>
             <div id="negativetests" class="data"></div>
             <div class="change">1 day change</div>
@@ -117,12 +152,8 @@
             <div class="change">1 week change</div>
             <div id="negative_7" class="change-data"></div>
           </div>
-
-        </div>
-
-        <div class="row">
           
-          <div class="card pending six columns">                
+          <div class="card pending four columns">                
             <div class="data-label">Pending Results</div>
             <div id="pendingresults" class="data"></div>
             <div class="change">1 day change</div>
@@ -131,7 +162,11 @@
             <div id="pending_7" class="change-data"></div>
           </div>
 
-          <div class="card active six columns">                
+         </div>
+
+        <div class="row">
+
+          <div class="card active four columns">                
             <div class="data-label">Active Cases</div>
             <div id="active" class="data"></div>
             <div class="change">1 day change</div>
@@ -140,12 +175,8 @@
             <div id="active_7" class="change-data"></div>
           </div>
 
-        </div>
-
-        <div class="row">
-
-          <div class="card recovered six columns">               
-            <div class="data-label">Recovered **</div>
+          <div class="card recovered four columns">               
+            <div class="data-label">Recovered *</div>
             <div id="recovered" class="data"></div>
             <div class="change">1 day change</div>
             <div id="recovered_24" class="change-data"></div>
@@ -153,7 +184,7 @@
             <div id="recovered_7" class="change-data"></div>
           </div>
 
-          <div class="card death six columns">                
+          <div class="card death four columns">                
             <div class="data-label">Deaths </div>
             <div id="deaths" class="data"></div>
             <div class="change">1 day change</div>
@@ -252,45 +283,216 @@
 
     <div class="row">
       <div class="twelve column">
-        <h2>Hospital</h2>
+        <h2>Active Cases</h2>
         <div class="row">
+
           <div class="four columns">   
-            <div class="hospital_covid card">             
-              <div class="data-label">Patients with COVID-19</div>
-              <div id="hospital_covid19" class="data"></div>
+            <div class="total_active_cases active card">             
+              <div class="data-label">Total Active Cases</div>
+              <div id="total_active_cases" class="data"></div>
               <div class="change">1 day change</div>
-              <div id="hospital_covid19_24" class="change-data"></div>
+              <div id="total_active_cases_24" class="change-data"></div>
               <div class="change">1 week change</div>
-              <div id="hospital_covid19_7" class="change-data"></div>
+              <div id="total_active_cases_7" class="change-data"></div>
             </div>
           </div>
 
-          <div class="hospital_occupancy_percentage eight columns">               
-            <div class="card">
-              <div class="data-label">Hospital Bed Occupancy</div>
 
-              <div class="bar-container">
-                <div class="bar-full-container">
-                  <div id="hospital_occupancy_percentage"></div>
-                  <div class="bar-full">
-                    <div id="bar-full-hospital"></div>
-                  </div>
+          <div class="four columns">   
+            <div class="symptomatic confirmed card">             
+              <div class="data-label">Symptomatic</div>
+              <div id="symptomatic" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="symptomatic_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="symptomatic_7" class="change-data"></div>
+            </div>
+          </div>
 
-                </div>
-              </div>
+          <div class="four columns">   
+            <div class="asymptomatic pending card">             
+              <div class="data-label">Asymptomatic</div>
+              <div id="asymptomatic" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="asymptomatic_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="asymptomatic_7" class="change-data"></div>
+            </div>
+          </div>
+        </div>
 
-              <div class="average_age">
-                There are currently <span id="hospital_beds_occupied" class="data"></span> out of <span id="hospital_beds_total" class="data"></span> hospital beds in use
-              </div>
+        <div class="row">
 
+          <div class="four columns">   
+            <div class="card">             
+              <div class="data-label">Hospitals **</div>
+              <div id="active_cases_hospital" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="active_cases_hospital_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="active_cases_hospital_7" class="change-data"></div>
+            </div>
+          </div>
+
+          <div class="four columns">   
+            <div class="card">             
+              <div class="data-label">Care Homes</div>
+              <div id="active_cases_carehomes" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="active_cases_carehomes_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="active_cases_carehomes_7" class="change-data"></div>
+            </div>
+          </div>
+
+
+          <div class="four columns">   
+            <div class="card">             
+              <div class="data-label">The Community</div>
+              <div id="active_cases_community" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="active_cases_community_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="active_cases_community_7" class="change-data"></div>
             </div>
           </div>
 
         </div>
       </div>
-
-
     </div>
+
+    <hr>
+    <div class="row">
+      <div class="twelve columns">
+
+    <h2>Positive Cases Identified by</h2>
+
+        <div class="row">
+
+          <div class="four columns">
+            <div class="card"> 
+              <div class="data-label">Symptomatic Individuals seeking healthcare</div>
+              <div id="identified_symptomatic" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_symptomatic_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_symptomatic_7" class="change-data"></div>
+            </div>
+          </div>
+ 
+          <div class="four columns">
+            <div class="card">  
+              <div class="data-label">Admissions Screening</div>
+              <div id="identified_admissions" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_admissions_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_admissions_7" class="change-data"></div>
+            </div>
+          </div>
+
+           <div class="four columns">
+            <div class="card">  
+              <div class="data-label">Planned Workforce Screening</div>
+              <div id="identified_workforce" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_workforce_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_workforce_7" class="change-data"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="four columns">
+            <div class="card">  
+              <div class="data-label">Inbound Travel by Air</div>
+              <div id="identified_air" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_air_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_air_7" class="change-data"></div>
+            </div>
+          </div>
+ 
+          <div class="four columns">
+            <div class="card">
+              <div class="data-label">Inbound Travel by Sea</div>
+              <div id="identified_sea" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_sea_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_sea_7" class="change-data"></div>
+            </div>
+          </div>
+
+           <div class="four columns">
+            <div class="card">  
+              <div class="data-label">Contact Tracing</div>
+              <div id="identified_tracing" class="data"></div>
+              <div class="change">1 day change</div>
+              <div id="identified_tracing_24" class="change-data"></div>
+              <div class="change">1 week change</div>
+              <div id="identified_tracing_7" class="change-data"></div>
+            </div>
+          </div>
+
+        </div>
+
+        
+
+        <div class="row">
+
+          <div class="eight columns">
+          <h2>Identified Positive Cases travelling from</h2>
+            <div class="row">
+
+              <div class="six columns">
+                <div class="card negative"> 
+                  <div class="data-label">Green Countries</div>
+                  <div id="country_green" class="data"></div>
+                  <div class="change">1 day change</div>
+                  <div id="country_green_24" class="change-data"></div>
+                  <div class="change">1 week change</div>
+                  <div id="country_green_7" class="change-data"></div>
+                </div>
+              </div>
+     
+              <div class="six columns">
+                <div class="card confirmed">  
+                  <div class="data-label">Red or Amber Countries</div>
+                  <div id="country_red" class="data"></div>
+                  <div class="change">1 day change</div>
+                  <div id="country_red_24" class="change-data"></div>
+                  <div class="change">1 week change</div>
+                  <div id="country_red_7" class="change-data"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="four columns">
+          <h2>Cases per 100,000</h2>
+               <div class="twelve columns">
+                <div class="card">  
+                  <div class="data-label">14 Day Number per 100,000</div>
+                  <div id="fortnight" class="data"></div>
+                  <div class="change">1 day change</div>
+                  <div id="fortnight_24" class="change-data"></div>
+                  <div class="change">1 week change</div>
+                  <div id="fortnight_7" class="change-data"></div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 <hr>
     <div class="row">
       <div class="twelve column">
@@ -320,7 +522,7 @@
 
           <div class="four columns">   
             <div class="card">             
-              <div class="data-label">Hospitals ***</div>
+              <div class="data-label">Hospitals **</div>
               <div id="hospital_deaths" class="data"></div>
               <div class="change">1 day change</div>
               <div id="hospital_deaths_24" class="change-data"></div>
@@ -395,11 +597,11 @@
       <div class="twelve column">
         <footer>
 
-          <p>A <a href="http://www.bearpig.com" target="_blank">bearpig</a> & <a href="http://www.openrock.co/" target="_blank">openrock</a> hack using data produced by the Government of Jersey via <a href="https://opendata.gov.je/dataset/coronavirus-covid-19-number-of-cases-in-jersey">Open Data Portal</a> under the <a href="https://opendata.gov.je/pages/open-government-licence-jersey-ogl-j-v1-0" target="_blank">OPL-J Licence</a>. You can find the project on Github <a href="https://github.com/bearpig/COVID19_org_je" target="_blank"> here.</a></p>
+         
           <p>#StayHomeStaySafe</p>
           <div class="credit">
             
-            * based on population estimates from <a href="https://www.gov.je/SiteCollectionDocuments/Government%20and%20administration/R%20Population%20Estimate%202019%2020200615%20SU.pdf" target="_blank_"> Gov.je</a>. ** A person is reported as recovered once they are asymptomatic and do not show any COVID-19 symptoms anymore or they are asymptomatic and have been tested negative after a positive test. *** calculated from the General Hospital, Overdale Hospital and St Saviours.
+            * A person is reported as recovered once they are asymptomatic and do not show any COVID-19 symptoms anymore or they are asymptomatic and have been tested negative after a positive test. ** calculated from the General Hospital, Overdale Hospital and St Saviours.
           </div>
       </footer>
 
